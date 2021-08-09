@@ -7,7 +7,7 @@ function seerToMon(number){
     return seers;
 }
 const totalMon = seerToMon(500);
-console.log(totalMon);
+// console.log(totalMon);
 
 
 
@@ -29,7 +29,7 @@ function totalSales(shirtQuantity, pantQuantity, shoeQuantity){
     return totalSales;
 }
 const totally = totalSales(50, 20, 10);
-console.log(totally);
+// console.log(totally);
 
 
 // problem - 3 =========================================================================
@@ -63,7 +63,7 @@ function deliveryCost(perTshirt){
     
 }
 const total = deliveryCost(201);
-console.log(total);
+// console.log(total);
 
 
 
@@ -71,20 +71,17 @@ console.log(total);
 // Problem - 4 =======================================================================
 
 function perfectFriend(names){
+    if( typeof(names) !='object')
+    {
+        return 'input is not valid';
+    }
     for(const name of names){
         if(name.length == 5){
             return name;
         }
-    }
+    }  
 }
 const friendnames = ['aman', 'sahinur', 'biplop', 'jaman', 'dulal'];
 const bestFriend = perfectFriend(friendnames);
 console.log(bestFriend);
 
-Function(){
-If( typeof names! ='object')
-{
-Return 'input is not valid ';
-}
-...baki code gulo
-}
