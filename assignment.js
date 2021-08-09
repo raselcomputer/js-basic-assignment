@@ -1,13 +1,17 @@
+
 // problem - 1 =========================================================================
 
 
 
 function seerToMon(number){
+    if(typeof number != 'number' || number < 0){
+        return 'please put a positive number';
+    }
     var seers = number / 40;
     return seers;
 }
-const totalMon = seerToMon(500);
-// console.log(totalMon);
+const totalMon = seerToMon(200);
+console.log(totalMon);
 
 
 
@@ -16,20 +20,25 @@ const totalMon = seerToMon(500);
 
 
 
-function totalSales(shirtQuantity, pantQuantity, shoeQuantity){
-    const perShirtPrice = 100;
-    const perPantPrice = 200;
-    const perShoePrice = 500;
+function totalSales(shirtQuantity, pantQuantity, shoeQuantity)
+    {
+        if(typeof shirtQuantity != 'number' || shirtQuantity < 0){
+            return 'please check your keyword';}
+        const perShirtPrice = 100;
+        const perPantPrice = 200;
+        const perShoePrice = 500;
 
-    let shirtSales = shirtQuantity * perShirtPrice;
-    let pantSales = pantQuantity * perPantPrice;
-    let shoeSales = shoeQuantity * perShoePrice;
-    
-    let totalSales = shirtSales + pantSales + shoeSales;
-    return totalSales;
-}
+        let shirtSales = shirtQuantity * perShirtPrice;
+        let pantSales = pantQuantity * perPantPrice;
+        let shoeSales = shoeQuantity * perShoePrice;
+        
+        let totalSales = shirtSales + pantSales + shoeSales;
+        return totalSales;
+    }
+     
 const totally = totalSales(50, 20, 10);
-// console.log(totally);
+console.log(totally);
+
 
 
 // problem - 3 =========================================================================
@@ -41,6 +50,8 @@ const second100perTshirtDeliveryPrice = 80;
 const thirdMoreperTshirtDeliveryPrice = 50; 
 
 function deliveryCost(perTshirt){
+    if(typeof perTshirt != 'number' || perTshirt < 0){
+        return 'this is not a valid number...please recheck again.';}
     if((perTshirt > 0) && (perTshirt <= 100)){
         const cost = perTshirt * first100perTshirtDeliveryCost;
         return cost;
@@ -63,7 +74,7 @@ function deliveryCost(perTshirt){
     
 }
 const total = deliveryCost(201);
-// console.log(total);
+console.log(total);
 
 
 
@@ -71,7 +82,7 @@ const total = deliveryCost(201);
 // Problem - 4 =======================================================================
 
 function perfectFriend(names){
-    if( typeof(names) !='object')
+    if( typeof names != 'object')
     {
         return 'input is not valid';
     }
@@ -79,9 +90,10 @@ function perfectFriend(names){
         if(name.length == 5){
             return name;
         }
-    }  
+    }
+    return 'there is no five index name';  
 }
-const friendnames = ['aman', 'sahinur', 'biplop', 'jaman', 'dulal'];
+const friendnames = ['aman', 'sahinur', 'biplop', 'jaman', 'rabbi'];
 const bestFriend = perfectFriend(friendnames);
 console.log(bestFriend);
 
